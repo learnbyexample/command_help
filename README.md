@@ -27,7 +27,7 @@ Also have a command called `explain` which works from command line but not as we
 * Optimizing the code - had recently read [good taste coding](https://medium.com/@bartobri/applying-the-linus-tarvolds-good-taste-coding-requirement-99749f37684a#.tlduyaygx) and it so happened that I too was able to remove some conditionals
 * Initially, I had different code for extracting text for `builtin` commands and `man` pages (a case of [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself)), then was able to combine into unified code
 * Saving output of `help` or `man` into a file and using it when needed proved faster
-* Check out earlier versions of the script for a snapshot of how things unfolded
+* Check out [earlier versions of the script](https://github.com/learnbyexample/command_help/commits/master/ch) for a snapshot of how things unfolded
 
 <br>
 ## Examples
