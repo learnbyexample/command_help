@@ -244,6 +244,27 @@ $ ch rename -verbose
        -e      Expression: code to act on files name.
 ```
 
+* option matching text of another option description
+
+```bash
+$ ch sort -V
+       sort - sort lines of text files
+
+              -V
+	      
+$ # the issue is because another line happened to start with `-V` before the `-V` option definition
+$ ch sort version-sort
+       sort - sort lines of text files
+
+              sort  according to WORD: general-numeric -g, human-numeric -h, month -M, numeric -n, random -R, version
+              -V
+
+       -V, --version-sort
+              natural sort of (version) numbers within text
+
+       Other options:
+```
+
 <br>
 ## Wish list
 
