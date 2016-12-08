@@ -19,7 +19,7 @@ ls (1)               - list directory contents
        -v     natural sort of (version) numbers within text
 ```
 
-Also have a command called `explain` which works from command line but not as well as **explainshell**. Unable to recall where I had come across.
+There is also a command-line implementation called [explain](https://github.com/andysalerno/explain) which works from command line but not as well as **explainshell**
 
 <br>
 **A few learnings from this exercise**
