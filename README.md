@@ -1,4 +1,9 @@
-# Command Help
+# <a name="command-help"></a>Command Help
+
+* [Examples](#examples)
+* [Known Issues](#known-issues)
+* [Wish list](#wish-list)
+* [License](#license)
 
 Inspired by [explainshell](http://explainshell.com/), tried out a `bash` script as a learning exercise. Tested only with **Ubuntu 16.04 LTS**. This is a simple single command search, many features like multiple commands in a pipe, command substitution, etc not implemented
 
@@ -30,7 +35,7 @@ There is also a command-line implementation called [explain](https://github.com/
 * Check out [earlier versions of the script](https://github.com/learnbyexample/command_help/commits/master/ch) for a snapshot of how things unfolded
 
 <br>
-## Examples
+### <a name="examples"></a>Examples
 
 Calling by simple `ch` works for me as the script has been added to a `PATH` directory  
 See [Getting started with Bash](https://stackoverflow.com/documentation/bash/300/getting-started-with-bash/1136/hello-world#t=201611220537537799159) for an introduction on `bash` scripting and how to execute it
@@ -132,6 +137,17 @@ $ ch grep -l -ro
               line.
 ```
 
+* Short and Long options spread over two lines
+
+```bash
+$ ch wget -o
+       Wget - The non-interactive network downloader.
+
+       -o logfile
+       --output-file=logfile
+           Log all messages to logfile.  The messages are normally reported to standard error.
+```
+
 * Word search
 
 ```bash
@@ -161,7 +177,7 @@ $ ch sed NUL
 ```
 
 <br>
-## Known Issues
+### <a name="known-issues"></a>Known Issues
 
 * option description spread over multiple lines
 
@@ -266,20 +282,20 @@ $ ch sort version-sort
 ```
 
 <br>
-## Wish list
+### <a name="wish-list"></a>Wish list
 
-* Script to automatically check that newer changes don't break working cases
-* Error message for wrong usage
+* Script to automatically check that newer changes don't break working cases (Done)
+* Error message for wrong usage (command not found done)
 * Colored/Formatted output
 * Extract section wise
 * Edge cases
 	* **\a** ; **%%** etc for `printf`
-	* **-f, -force** ; **-n, -nono** etc for `perl` based `rename`
+	* **-f, -force** ; **-n, -nono** etc for `perl` based `rename` (Done)
 * Command examples
 * Try out [groff](https://unix.stackexchange.com/questions/15855/how-to-dump-a-man-page/15859#15859) as suggested by [@Wildcard](https://unix.stackexchange.com/users/135943/wildcard)
 * Portable script to work on different flavors of Linux, possibly Unix variants too
 
 <br>
-## License
+### <a name="license"></a>License
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)

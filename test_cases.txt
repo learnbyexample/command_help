@@ -1,0 +1,136 @@
+======TEST CASE======
+$ ch grep -l
+       grep, egrep, fgrep, rgrep - print lines matching a pattern
+
+       -l, --files-with-matches
+              Suppress normal output; instead print the name of each input file from which output would normally have
+              been printed.  The scanning will stop on the first match.
+======TEST CASE======
+$ ch ls -v
+       ls - list directory contents
+
+       -v     natural sort of (version) numbers within text
+======TEST CASE======
+$ ch column -t
+     column — columnate lists
+
+     -t      Determine the number of columns the input contains and create a table.  Columns are delimited with
+             whitespace, by default, or with the characters supplied using the -s option.  Useful for pretty-printing
+             displays.
+======TEST CASE======
+$ ch cd -P
+    cd - Change the shell working directory.
+
+        -P	use the physical directory structure without following symbolic
+    	links: resolve symbolic links in DIR before processing instances
+    	of `..'
+======TEST CASE======
+$ ch ls -latrh
+       ls - list directory contents
+
+       -l     use a long listing format
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -t     sort by modification time, newest first
+
+       -r, --reverse
+              reverse order while sorting
+
+       -h, --human-readable
+              with -l and/or -s, print human readable sizes (e.g., 1K 234M 2G)
+
+======TEST CASE======
+$ ch ls --author
+       ls - list directory contents
+
+       --author
+              with -l, print the author of each file
+======TEST CASE======
+$ ch grep --regexp
+       grep, egrep, fgrep, rgrep - print lines matching a pattern
+
+       -e PATTERN, --regexp=PATTERN
+              Use PATTERN as the pattern.  If this option is used multiple times or is combined with the -f  (--file)
+              option,  search  for  all  patterns given.  This option can be used to protect a pattern beginning with
+              “-”.
+======TEST CASE======
+$ ch grep --color=auto
+       grep, egrep, fgrep, rgrep - print lines matching a pattern
+
+       --color[=WHEN], --colour[=WHEN]
+              Surround the matched (non-empty) strings, matching lines, context lines, file names, line numbers, byte
+              offsets, and separators (for fields and groups of context lines) with escape sequences to display  them
+              in  color  on  the  terminal.   The  colors  are  defined by the environment variable GREP_COLORS.  The
+              deprecated environment variable GREP_COLOR is still supported, but its setting does not have  priority.
+              WHEN is never, always, or auto.
+======TEST CASE======
+$ ch find -mtime
+       find - search for files in a directory hierarchy
+
+       -mtime n
+              File's  data  was last modified n*24 hours ago.  See the comments for -atime to understand how rounding
+              affects the interpretation of file modification times.
+======TEST CASE======
+$ ch grep -l -ro
+       grep, egrep, fgrep, rgrep - print lines matching a pattern
+
+       -l, --files-with-matches
+              Suppress normal output; instead print the name of each input file from which output would normally have
+              been printed.  The scanning will stop on the first match.
+       -r, --recursive
+              Read  all  files  under  each  directory, recursively, following symbolic links only if they are on the
+              command line.  Note that if no file operand is given, grep searches the  working  directory.   This  is
+              equivalent to the -d recurse option.
+
+       -o, --only-matching
+              Print  only  the matched (non-empty) parts of a matching line, with each such part on a separate output
+              line.
+
+======TEST CASE======
+$ ch grep 'exit status'
+       grep, egrep, fgrep, rgrep - print lines matching a pattern
+
+              file name wildcard expansion and therefore  should  not  be  treated  as  options.   This  behavior  is
+              available only with the GNU C library, and only when POSIXLY_CORRECT is not set.
+
+EXIT STATUS
+       Normally  the exit status is 0 if a line is selected, 1 if no lines were selected, and 2 if an error occurred.
+       However, if the -q or --quiet or --silent is used and a line is selected, the exit status  is  0  even  if  an
+       error occurred.
+
+COPYRIGHT
+======TEST CASE======
+$ ch sed NUL
+       sed - stream editor for filtering and transforming text
+
+
+       -z, --null-data
+
+              separate lines by NUL characters
+
+       --help
+              display this help and exit
+======TEST CASE======
+$ ch wget -o
+       Wget - The non-interactive network downloader.
+
+       -o logfile
+       --output-file=logfile
+           Log all messages to logfile.  The messages are normally reported to standard error.
+======TEST CASE======
+$ ch read -n -N
+    read - Read a line from the standard input and split it into fields.
+
+      -n nchars	return after reading NCHARS characters rather than waiting
+    		for a newline, but honor a delimiter if fewer than NCHARS
+    		characters are read before the delimiter
+      -N nchars	return only after reading exactly NCHARS characters, unless
+    		EOF is encountered or read times out, ignoring any delimiter
+======TEST CASE======
+$ ch rename -nono
+       rename - renames multiple files
+
+       -n, -nono
+               No action: print names of files to be renamed, but don't rename.
