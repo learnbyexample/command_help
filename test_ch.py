@@ -18,7 +18,6 @@ with open(test_case_file, 'r', encoding='UTF-8') as f:
         
         cmd_op = subprocess.getoutput(cmd)
         if not cmd_op == cmp_str[:-1]:
-            print('Mismatch for: ' + cmd, file=sys.stderr)
-            exit(1)
+            sys.exit('Mismatch for: ' + cmd)
 
 print('No. of test cases checked:', test_count)
