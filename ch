@@ -34,14 +34,13 @@ file='/tmp/command_help.txt'
 ###############################################
 # Save help/man page to file variable
 ###############################################
-if type "$cmd" |& grep -qF 'not found'; then
-    echo "Error: $cmd is not a valid command" 1>&2 && exit 1
+cmd_type=$(type -t "$cmd")
+if [[ "$cmd_type" == 'builtin' ]]; then
+    help -m "$cmd" > "$file"
+elif [[ "$cmd_type" == 'file' ]]; then
+    man "$cmd" | col -bx > "$file"
 else
-    if type "$cmd" | grep -qF 'is a shell builtin'; then
-        help -m "$cmd" > "$file"
-    else
-        man "$cmd" | col -bx > "$file"
-    fi
+    echo "Error: $cmd is not a valid command" 1>&2 && exit 1
 fi
 
 
