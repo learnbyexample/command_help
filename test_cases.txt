@@ -134,3 +134,6 @@ $ ch rename -nono
 
        -n, -nono
                No action: print names of files to be renamed, but don't rename.
+======TEST CASE======
+$ ch xyz
+Error: xyz is not a valid command
