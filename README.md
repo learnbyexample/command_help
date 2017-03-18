@@ -8,6 +8,7 @@
 Inspired by [explainshell](http://explainshell.com/), tried out a `bash` script as a learning exercise. Tested only with **Ubuntu 16.04 LTS**. This is a simple single command search, many features like multiple commands in a pipe, command substitution, etc not implemented
 
 <br>
+
 Was using this simple function for single option search until this script:
 
 ```bash
@@ -27,6 +28,7 @@ ls (1)               - list directory contents
 There is also a command-line implementation called [explain](https://github.com/andysalerno/explain) which works from command line but not as well as **explainshell**
 
 <br>
+
 **A few learnings from this exercise**
 
 * Optimizing the code - had recently read [good taste coding](https://medium.com/@bartobri/applying-the-linus-tarvolds-good-taste-coding-requirement-99749f37684a#.tlduyaygx) and it so happened that I too was able to remove some conditionals
@@ -35,6 +37,7 @@ There is also a command-line implementation called [explain](https://github.com/
 * Check out [earlier versions of the script](https://github.com/learnbyexample/command_help/commits/master/ch) for a snapshot of how things unfolded
 
 <br>
+
 ### <a name="examples"></a>Examples
 
 Calling by simple `ch` works for me as the script has been added to a `PATH` directory  
@@ -177,6 +180,7 @@ $ ch sed NUL
 ```
 
 <br>
+
 ### <a name="known-issues"></a>Known Issues
 
 * option description spread over multiple lines
@@ -282,6 +286,7 @@ $ ch sort version-sort
 ```
 
 <br>
+
 ### <a name="wish-list"></a>Wish list
 
 * Script to automatically check that newer changes don't break working cases (Done)
@@ -296,6 +301,7 @@ $ ch sort version-sort
 * Portable script to work on different flavors of Linux, possibly Unix variants too
 
 <br>
+
 ### <a name="license"></a>License
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
