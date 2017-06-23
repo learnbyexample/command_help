@@ -3,6 +3,9 @@
 # catch uninitialized variables
 set -u
 
+# check dependencies
+if ! type awk &> /dev/null; then echo "[FATAL] Missing dependency: awk" 1>&2; exit 1; fi
+
 ###############################################
 # extract from line starting with search word
 # upto newline or line starting with -
