@@ -69,7 +69,7 @@ for arg in "$@" ; do
         extract_text "$arg_mod"
     # single letter options starting with -
     elif [[ $arg =~ ^-[^-] ]] ; then
-        while read -n1 char; do
+        while read -r -n1 char; do
             extract_text "-$char"
             echo
         done < <(echo -n "${arg:1}")
