@@ -1,7 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # catch uninitialized variables
 set -u
+
+# check dependencies
+if ! type awk &> /dev/null; then echo "[FATAL] Missing dependency: awk" 1>&2; exit 1; fi
 
 ###############################################
 # extract from line starting with search word
@@ -28,7 +31,7 @@ extract_text ()
 ###############################################
 cmd="$1"
 shift
-file='/tmp/command_help.txt'
+file="$(mktemp)"
 
 
 ###############################################
@@ -69,7 +72,7 @@ for arg in "$@" ; do
         extract_text "$arg_mod"
     # single letter options starting with -
     elif [[ $arg =~ ^-[^-] ]] ; then
-        while read -n1 char; do
+        while read -r -n1 char; do
             extract_text "-$char"
             echo
         done < <(echo -n "${arg:1}")
