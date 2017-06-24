@@ -121,6 +121,18 @@ $ ch find -mtime
               affects the interpretation of file modification times.
 ```
 
+* `man` pages with short and long option both starting with single -
+
+```bash
+$ ch rename -verbose -n
+       rename - renames multiple files
+
+       -v, -verbose
+               Verbose: print names of files successfully renamed.
+       -n, -nono
+               No action: print names of files to be renamed, but don't rename.
+```
+
 * Multiple arguments
 
 ```bash
@@ -220,53 +232,20 @@ $ # ideally, it should be
 * special characters
 
 ```bash
-$ # should have extracted only option line instead of word search
-$ ch printf %%
-       printf - format and print data
+$ # should have extracted only option line
+$ ch printf %b
+    printf - Formats and prints ARGUMENTS under control of the FORMAT.
 
-       \UHHHHHHHH
-              Unicode character with hex value HHHHHHHH (8 digits)
-
-       %%     a single %
-
-       %b     ARGUMENT  as  a  string  with  '\' escapes interpreted, except that octal escapes are of the form \0 or
-              \0NNN
-
-$ # similarly, doesn't recognize escaped sequences like \a, \e and so on
-$ ch printf \e
-       printf - format and print data
-
-
-       \c     produce no further output
-
-       \e     escape
-
-       \f     form feed
-```
-
-* `man` pages with short and long option both starting with single -
-
-```bash
-$ # it is treated as seven single options: `-v`, `-e`, `-r`, `-b`, `-o`, `-s` and `-e`
-$ # also note, no check for repetitive options given
-$ ch rename -verbose
-       rename - renames multiple files
-
-       -v, -verbose
-               Verbose: print names of files successfully renamed.
-
-       -e      Expression: code to act on files name.
-
-
-
-
-
-       -e      Expression: code to act on files name.
+      %b	expand backslash escape sequences in the corresponding argument
+      %q	quote the argument in a way that can be reused as shell input
+      %(fmt)T output the date-time string resulting from using FMT as a format
+            string for strftime(3)
 ```
 
 * option matching text of another option description
 
 ```bash
+$ # depends on width of terminal, this issue seen on 120 as width
 $ ch sort -V
        sort - sort lines of text files
 
