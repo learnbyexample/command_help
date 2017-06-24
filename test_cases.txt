@@ -137,3 +137,19 @@ $ ch rename -nono
 ======TEST CASE======
 $ ch xyz
 Error: xyz is not a valid command
+======TEST CASE======
+$ ch rename -verbose -n
+       rename - renames multiple files
+
+       -v, -verbose
+               Verbose: print names of files successfully renamed.
+       -n, -nono
+               No action: print names of files to be renamed, but don't rename.
+======TEST CASE======
+$ ch printf %b
+    printf - Formats and prints ARGUMENTS under control of the FORMAT.
+
+      %b	expand backslash escape sequences in the corresponding argument
+      %q	quote the argument in a way that can be reused as shell input
+      %(fmt)T output the date-time string resulting from using FMT as a format
+            string for strftime(3)
