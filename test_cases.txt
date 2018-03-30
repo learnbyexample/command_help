@@ -153,3 +153,18 @@ $ ch printf %b
       %q	quote the argument in a way that can be reused as shell input
       %(fmt)T output the date-time string resulting from using FMT as a format
             string for strftime(3)
+======TEST CASE======
+$ ch sed -i
+       sed - stream editor for filtering and transforming text
+
+       -i[SUFFIX], --in-place[=SUFFIX]
+
+              edit files in place (makes backup if SUFFIX supplied)
+======TEST CASE======
+$ ch awk -v
+       gawk - pattern scanning and processing language
+
+       -v var=val
+       --assign var=val
+              Assign the value val to the variable var, before execution of the program begins.  Such variable values
+              are available to the BEGIN rule of an AWK program.
