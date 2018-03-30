@@ -1,3 +1,7 @@
+[![Join the chat at https://gitter.im/learnbyexample/scripting_course](https://badges.gitter.im/learnbyexample/scripting_course.svg)](https://gitter.im/learnbyexample/scripting_course) [![support learnbyexample](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/learnbyexample/donate)
+
+<br>
+
 # <a name="command-help"></a>Command Help
 
 * [Examples](#examples)
@@ -266,6 +270,18 @@ $ ch sort version-sort
 
 <br>
 
+### <a name="contributing"></a>Contributing
+
+* Please open an issue for typos/bugs/suggestions/etc
+    * Even for pull requests, open an issue for discussion before submitting PRs
+    * or [gitter group chat](https://gitter.im/learnbyexample/scripting_course) for discussion as well as for help/mentorship
+* Share the repo with friends/colleagues, on social media, etc to help reach other learners
+* Contribute by donating on [liberapay](https://liberapay.com/learnbyexample/donate)
+* In case you need to reach me, use [gitter private chat](https://gitter.im/learnbyexample)
+    * or mail me at `echo 'bGVhcm5ieWV4YW1wbGUubmV0QGdtYWlsLmNvbQo=' | base64 --decode`
+
+<br>
+
 ### <a name="wish-list"></a>Wish list
 
 * Script to automatically check that newer changes don't break working cases (Done)
@@ -283,4 +299,4 @@ $ ch sort version-sort
 
 ### <a name="license"></a>License
 
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
