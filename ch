@@ -6,16 +6,19 @@ set -u
 ###############################################
 # extract from line starting with search word
 # upto newline or line starting with -
-# f=2 patch for options spread over 2 lines (ex: ch wget -o)
+# f=2 patch for
+#   options spread over 2 lines (ex: ch wget -o, ch awk -v)
+#   sed which has an empty line in between option and description
 
 # builtin command help pages usually do not
 # have newline separating option descriptions
 ###############################################
 extract_text ()
 {
-    awk -v regex="^\\\s*$1\\\>" '
+    awk -v cmd="$cmd" -v regex="^\\\s*$1\\\>" '
         $0 ~ regex{f=2; print; next}
         f==2 && /^\s*--/{f=1; print; next}
+        f==2 && cmd=="sed" && /^\s*$/{f=1; print; next}
         (/^\s*$/  || /^\s*-/) && f{exit}
         f' "$file"
 }
@@ -85,3 +88,4 @@ done
 # remove temporary file
 ###############################################
 rm "$file"
+
