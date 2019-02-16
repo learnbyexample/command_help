@@ -1,4 +1,4 @@
-[![Join the chat at https://gitter.im/learnbyexample/scripting_course](https://badges.gitter.im/learnbyexample/scripting_course.svg)](https://gitter.im/learnbyexample/scripting_course) [![support learnbyexample](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/learnbyexample/donate)
+[![Join the chat at https://gitter.im/learnbyexample/scripting_course](https://badges.gitter.im/learnbyexample/scripting_course.svg)](https://gitter.im/learnbyexample/scripting_course)
 
 <br>
 
@@ -6,6 +6,7 @@
 
 * [Examples](#examples)
 * [Known Issues](#known-issues)
+* [Contributing](#contributing)
 * [Wish list](#wish-list)
 * [License](#license)
 
@@ -45,7 +46,7 @@ There is also a command-line implementation called [explain](https://github.com/
 ### <a name="examples"></a>Examples
 
 Calling by simple `ch` works for me as the script has been added to a `PATH` directory  
-See [Getting started with Bash](https://stackoverflow.com/documentation/bash/300/getting-started-with-bash/1136/hello-world#t=201611220537537799159) for an introduction on `bash` scripting and how to execute it
+See [Bash Scripting tutorial](https://ryanstutorials.net/linuxtutorial/scripting.php) for an introduction on `bash` scripting and how to execute it
 
 * Single letter option
 
@@ -276,7 +277,6 @@ $ ch sort version-sort
     * Even for pull requests, open an issue for discussion before submitting PRs
     * or [gitter group chat](https://gitter.im/learnbyexample/scripting_course) for discussion as well as for help/mentorship
 * Share the repo with friends/colleagues, on social media, etc to help reach other learners
-* Contribute by donating on [liberapay](https://liberapay.com/learnbyexample/donate)
 * In case you need to reach me, use [gitter private chat](https://gitter.im/learnbyexample)
     * or mail me at `echo 'bGVhcm5ieWV4YW1wbGUubmV0QGdtYWlsLmNvbQo=' | base64 --decode`
 
@@ -300,3 +300,4 @@ $ ch sort version-sort
 ### <a name="license"></a>License
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
