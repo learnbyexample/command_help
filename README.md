@@ -1,36 +1,13 @@
-[![Join the chat at https://gitter.im/learnbyexample/scripting_course](https://badges.gitter.im/learnbyexample/scripting_course.svg)](https://gitter.im/learnbyexample/scripting_course)
-
-<br>
-
 # <a name="command-help"></a>Command Help
 
 * [Examples](#examples)
 * [Known Issues](#known-issues)
 * [Contributing](#contributing)
 * [Wish list](#wish-list)
+* [Basic one-liner script](#one-liner)
 * [License](#license)
 
 Inspired by [explainshell](http://explainshell.com/), tried out a `bash` script as a learning exercise. Tested only with **Ubuntu 16.04 LTS**. This is a simple single command search, many features like multiple commands in a pipe, command substitution, etc not implemented
-
-<br>
-
-Was using this simple function for single option search until this script:
-
-```bash
-$ ch() { whatis $1; man $1 | sed -n "/^\s*$2/,/^$/p" ; }
-
-$ ch grep -l
-grep (1)             - print lines matching a pattern
-       -l, --files-with-matches
-              Suppress normal output; instead print the name of each input file from which output would normally have
-              been printed.  The scanning will stop on the first match.
-
-$ ch ls -v
-ls (1)               - list directory contents
-       -v     natural sort of (version) numbers within text
-```
-
-There is also a command-line implementation called [explain](https://github.com/andysalerno/explain) which works from command line but not as well as **explainshell**
 
 <br>
 
@@ -274,11 +251,9 @@ $ ch sort version-sort
 ### <a name="contributing"></a>Contributing
 
 * Please open an issue for typos/bugs/suggestions/etc
-    * Even for pull requests, open an issue for discussion before submitting PRs
-    * or [gitter group chat](https://gitter.im/learnbyexample/scripting_course) for discussion as well as for help/mentorship
+    * **Even for pull requests, open an issue for discussion before submitting PRs**
 * Share the repo with friends/colleagues, on social media, etc to help reach other learners
-* In case you need to reach me, use [gitter private chat](https://gitter.im/learnbyexample)
-    * or mail me at `echo 'bGVhcm5ieWV4YW1wbGUubmV0QGdtYWlsLmNvbQo=' | base64 --decode`
+* In case you need to reach me, mail me at `echo 'bGVhcm5ieWV4YW1wbGUubmV0QGdtYWlsLmNvbQo=' | base64 --decode` or send a DM via [twitter](https://twitter.com/learn_byexample)
 
 <br>
 
@@ -294,6 +269,28 @@ $ ch sort version-sort
 * Command examples
 * Try out [groff](https://unix.stackexchange.com/questions/15855/how-to-dump-a-man-page/15859#15859) as suggested by [@Wildcard](https://unix.stackexchange.com/users/135943/wildcard)
 * Portable script to work on different flavors of Linux, possibly Unix variants too
+
+<br>
+
+### <a name="one-liner"></a>Basic one-liner script
+
+Was using this simple function for single option search until this script:
+
+```bash
+$ ch() { whatis $1; man $1 | sed -n "/^\s*$2/,/^$/p" ; }
+
+$ ch grep -l
+grep (1)             - print lines matching a pattern
+       -l, --files-with-matches
+              Suppress normal output; instead print the name of each input file from which output would normally have
+              been printed.  The scanning will stop on the first match.
+
+$ ch ls -v
+ls (1)               - list directory contents
+       -v     natural sort of (version) numbers within text
+```
+
+There is also a command-line implementation called [explain](https://github.com/andysalerno/explain) which works from command line but not as well as **explainshell**
 
 <br>
 
