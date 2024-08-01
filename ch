@@ -3,6 +3,31 @@
 # catch uninitialized variables
 set -u
 
+
+# display basic usage information
+display_basic_usage ()
+{
+    echo "Usage: $0 <command> [options]"
+    echo "Try '$0 --help' for more information."
+}
+
+
+# display detailed usage information
+display_detailed_usage ()
+{
+    echo "Usage: $0 <command> [options]"
+    echo "Extract help information for a given command and its options."
+    echo
+    echo "Options:"
+    echo "  --help    Show this help message and exit."
+    echo
+    echo "Examples:"
+    echo "  $0 ls --help"
+    echo "  $0 grep --invert-match"
+    exit 0
+}
+
+
 ###############################################
 # extract from line starting with search word
 # upto newline or line starting with -
@@ -22,6 +47,15 @@ extract_text ()
         (/^\s*$/  || /^\s*-/) && f{exit}
         f' "$file"
 }
+
+
+# Check for help option or no arguments
+if [[ "$#" -eq 0 ]]; then
+    display_basic_usage
+    exit 1
+elif [[ "$1" == "--help" ]]; then
+    display_detailed_usage
+fi
 
 
 ###############################################
